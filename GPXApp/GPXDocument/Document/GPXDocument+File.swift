@@ -46,7 +46,7 @@ extension GPXDocument {
         throw NSError(domain: NSOSStatusErrorDomain, code: unimpErr, userInfo: nil)
     }
 
-    override func read(from url: URL, ofType typeName: String) throws {
+    nonisolated override func read(from url: URL, ofType typeName: String) throws {
         if typeName == UTType.gpxWorkshop.identifier {
             throw NSError(domain: NSOSStatusErrorDomain, code: unimpErr, userInfo: nil)
         }
